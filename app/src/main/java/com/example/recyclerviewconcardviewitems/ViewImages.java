@@ -30,11 +30,10 @@ public class ViewImages extends AppCompatActivity {
 
         txtTitulo=findViewById(R.id.textView);
         rImages=findViewById(R.id.rImages);
-        rImages.setLayoutManager(new GridLayoutManager(this,1));
+        rImages.setLayoutManager(new GridLayoutManager(this,2));
 
         Bundle bl=this.getIntent().getExtras();
         String[] images=getIntent().getStringArrayExtra("images");
-        //List<String> images= Arrays.asList(bl.getStringArray("images"));
 
         rImages.setLayoutAnimation(animation);
         txtTitulo.setText(bl.getString("title"));
